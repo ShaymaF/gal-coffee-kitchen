@@ -1,0 +1,335 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-cormorant);
+}
+
+.font-sans {
+  font-family: var(--font-montserrat);
+}
+
+.bg-gal-dark {
+  background-color: #00443f;
+}
+
+.text-gal-dark {
+  color: #00443f;
+}
+
+.bg-gal-beige {
+  background-color: #e7cfab;
+}
+
+.text-gal-beige {
+  color: #e7cfab;
+}
+
+.text-gal-green {
+  color: #4C867D;
+}
+
+.border-gal-dark {
+  border-color: #00443f;
+}
+
+.border-gal-beige {
+  border-color: #e7cfab;
+}
+
+.hover\:bg-gal-dark:hover {
+  background-color: #00443f;
+}
+
+.hover\:text-gal-dark:hover {
+  color: #00443f;
+}
+
+.hover\:bg-gal-beige:hover {
+  background-color: #e7cfab;
+}
+
+.hover\:text-gal-beige:hover {
+  color: #e7cfab;
+}
+
+.focus-visible\:ring-gal-dark:focus-visible {
+  --ring-color: #00443f;
+}
+
+/* Animation classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease forwards;
+}
+
+/* Staggered animation delays */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* Fidalgo-style elements */
+.fidalgo-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.fidalgo-heading {
+  font-family: var(--font-cormorant);
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.fidalgo-text {
+  font-family: var(--font-montserrat);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.fidalgo-button {
+  font-family: var(--font-montserrat);
+  font-weight: 300;
+  letter-spacing: 1px;
+  border: 1px solid #e7cfab;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+}
+
+.fidalgo-button:hover {
+  background-color: #e7cfab;
+  color: #00443f;
+}
+
+.fidalgo-diamond {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  border: 1px solid rgba(231, 207, 171, 0.3);
+  transform: rotate(45deg);
+  margin: 0 10px;
+}
+
+.fidalgo-divider {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(231, 207, 171, 0.3);
+  margin: 20px auto;
+}
+
+.fidalgo-menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.fidalgo-menu-item-content {
+  flex-grow: 1;
+}
+
+.fidalgo-menu-item-price {
+  font-family: var(--font-cormorant);
+  font-weight: 400;
+  color: #e7cfab;
+}
+
+.fidalgo-menu-item-title {
+  font-family: var(--font-cormorant);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e7cfab;
+  margin-bottom: 5px;
+}
+
+.fidalgo-menu-item-description {
+  font-family: var(--font-montserrat);
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(231, 207, 171, 0.7);
+}
+
+.fidalgo-section-title {
+  font-family: var(--font-cormorant);
+  font-weight: 300;
+  font-size: 60px;
+  color: #e7cfab;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.fidalgo-section-subtitle {
+  font-family: var(--font-montserrat);
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(231, 207, 171, 0.7);
+  text-align: center;
+  letter-spacing: 1px;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.fidalgo-image-hover {
+  overflow: hidden;
+}
+
+.fidalgo-image-hover img {
+  transition: transform 0.7s ease;
+}
+
+.fidalgo-image-hover:hover img {
+  transform: scale(1.1);
+}
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari and Opera */
+}
+/* globals.css or Tailwind config */
+.rounded-image {
+  @apply overflow-hidden relative;
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
