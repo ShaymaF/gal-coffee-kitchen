@@ -1,0 +1,53 @@
+/* Custom styles for the menu categories slider */
+.categories-swiper .swiper-slide {
+    width: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .categories-swiper .swiper-slide-active button {
+    transform: scale(1.05);
+  }
+  
+  /* Custom navigation buttons */
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: rgba(0, 68, 63, 0.8);
+    border-radius: 50%;
+    color: #e7cfab !important;
+    transition: all 0.3s ease;
+  }
+  
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background-color: rgba(231, 207, 171, 0.2);
+  }
+  
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 18px !important;
+  }
+  
+  .swiper-button-disabled {
+    opacity: 0.3 !important;
+    cursor: not-allowed !important;
+  }
+  
+  /* Menu item hover effects */
+  .fidalgo-menu-item {
+    transition: transform 0.3s ease;
+    padding: 12px;
+    border-radius: 4px;
+  }
+  
+  .fidalgo-menu-item:hover {
+    transform: translateY(-4px);
+    background-color: rgba(231, 207, 171, 0.05);
+  }
+  
+  /* Smooth category transitions */
+  .fidalgo-section-title {
+    transition: all 0.5s ease;
+  }
+  

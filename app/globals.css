@@ -265,6 +265,7 @@
   font-family: var(--font-cormorant);
   font-weight: 400;
   color: #e7cfab;
+  font-size: 18px;
 }
 
 .fidalgo-menu-item-title {
@@ -274,6 +275,7 @@
   letter-spacing: 1px;
   color: #e7cfab;
   margin-bottom: 5px;
+  font-size: 18px;
 }
 
 .fidalgo-menu-item-description {

@@ -7,7 +7,6 @@ import { Gallery } from "@/components/gallery"
 import { Contact } from "@/components/contact"
 import { ConnectWithUs } from "@/components/connect-with-us"
 import { Footer } from "@/components/footer"
-import { BookTableButton } from "@/components/book-table-button"
 import { TopButton } from "@/components/top-button"
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
       <Gallery />
       <Contact />
       <Footer />
-      <BookTableButton />
       <TopButton />
     </main>
   )

@@ -6,8 +6,8 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { ShoppingBag } from "lucide-react"
 import { useCart } from "@/components/cart/cart-provider"
-import { useToast } from "@/components/ui/use-toast"
 import type { MenuItem } from "@/types/menu"
+import { useToast } from "@/hooks/use-toast"
 
 interface MenuItemsProps {
   items: MenuItem[]
@@ -77,7 +77,7 @@ export function MenuItems({ items }: MenuItemsProps) {
                       <Badge
                         key={i}
                         variant="outline"
-                        className="text-xs font-normal text-gal-beige/70 border-gal-beige/30"
+                        className="text-sm font-normal text-gal-beige/70 border-gal-beige/30"
                       >
                         {badge}
                       </Badge>
@@ -85,7 +85,7 @@ export function MenuItems({ items }: MenuItemsProps) {
                   </div>
                 )}
               </div>
-              <span className="fidalgo-menu-item-price">{menuItem.price}</span>
+              <span className="fidalgo-menu-item-price">{menuItem.price} TND</span>
             </div>
             <p className="fidalgo-menu-item-description">{menuItem.description}</p>
 
@@ -97,7 +97,7 @@ export function MenuItems({ items }: MenuItemsProps) {
             >
               <button
                 onClick={() => handleAddToCart(menuItem)}
-                className="fidalgo-button text-gal-beige text-xs py-2 px-4"
+                className="fidalgo-button text-gal-beige text-sm py-2 px-4"
               >
                 <ShoppingBag className="inline-block mr-2 h-4 w-4" />
                 ADD TO CART

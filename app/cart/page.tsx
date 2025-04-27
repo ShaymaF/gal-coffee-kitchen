@@ -42,27 +42,42 @@ export default function CartPage() {
             </div>
           ) : (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-center py-12 border border-gal-beige/20 rounded-sm mt-12"
-            >
-              <div className="mb-8 relative w-48 h-48 mx-auto">
-                <Image src="/images/cart-empty.png" alt="Empty cart" fill className="object-contain" />
-              </div>
-              <p className="text-gal-beige mb-8 text-lg">Your cart is currently empty.</p>
-              <Link href="/menu">
-                <button className="fidalgo-button text-gal-beige">
-                  <ArrowLeft className="mr-2 h-4 w-4 inline-block" />
-                  RETURN TO MENU
-                </button>
-              </Link>
-            </motion.div>
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-center py-12 border border-gal-beige/20 rounded-sm mt-12"
+          >
+            <div className="mb-8 relative w-48 h-48 mx-auto flex items-center justify-center">
+              <svg
+                width="120"
+                height="120"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#E7CFAB"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="opacity-80"
+              >
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+                <circle cx="9" cy="13" r="1" />
+                <circle cx="15" cy="13" r="1" />
+              </svg>
+            </div>
+            <p className="text-gal-beige mb-8 text-lg">Your cart is currently empty.</p>
+            <Link href="/menu">
+              <button className="fidalgo-button text-gal-beige">
+                <ArrowLeft className="mr-2 h-4 w-4 inline-block" />
+                RETURN TO MENU
+              </button>
+            </Link>
+          </motion.div>
           )}
         </div>
       </section>
       <Footer />
-      <BookTableButton />
     </main>
   )
 }

@@ -12,7 +12,6 @@ export default function ContactPage() {
       <ContactHero />
       <ContactForm />
       <Footer />
-      <BookTableButton />
       <TopButton />
     </main>
   )

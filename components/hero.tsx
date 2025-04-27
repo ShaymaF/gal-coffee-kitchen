@@ -2,8 +2,12 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { BookTableButton } from "./book-table-button"
+import { useRouter } from "next/navigation"
 
 export function Hero() {
+    const router = useRouter()
+  
   return (
     <section className="relative h-screen bg-gal-dark overflow-hidden">
       {/* Background Image */}
@@ -53,8 +57,13 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <button className="fidalgo-button text-gal-beige">BOOK A TABLE</button>
-          <button className="fidalgo-button text-gal-beige">EXPLORE MENU</button>
+          <BookTableButton
+        trigger={
+       <button className="fidalgo-button text-gal-beige">BOOK A TABLE</button>
+       }
+       />
+
+          <button className="fidalgo-button text-gal-beige" onClick={() =>  router.push('/menu')}>EXPLORE MENU</button>
         </motion.div>
       </div>
 
@@ -65,7 +74,11 @@ export function Hero() {
         transition={{ duration: 1, delay: 1.2 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
       >
-        <span className="text-gal-beige/70 text-sm tracking-widest mb-2 font-sans">SCROLL</span>
+        <span className="text-gal-beige/70 text-sm tracking-widest mb-2 font-sans"
+        onClick={
+          () => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+        }
+        >SCROLL</span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}

@@ -12,7 +12,6 @@ export default function GalleryPage() {
       <GalleryHero />
       <GalleryGrid />
       <Footer />
-      <BookTableButton />
       <TopButton />
     </main>
   )

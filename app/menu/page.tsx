@@ -4,6 +4,7 @@ import { MenuHero } from "@/components/menu/menu-hero"
 import { MenuCategories } from "@/components/menu/menu-categories"
 import { BookTableButton } from "@/components/book-table-button"
 import { TopButton } from "@/components/top-button"
+import "../../styles/menu-categories.css"
 
 export default function MenuPage() {
   return (
@@ -12,7 +13,7 @@ export default function MenuPage() {
       <MenuHero />
       <MenuCategories />
       <Footer />
-      <BookTableButton />
+      {/* <BookTableButton /> */}
       <TopButton />
     </main>
   )

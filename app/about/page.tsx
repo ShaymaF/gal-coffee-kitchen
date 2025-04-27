@@ -18,7 +18,7 @@ export default function AboutPage() {
       {/* <AboutTeam /> */}
       <AboutTestimonials />
       <Footer />
-      <BookTableButton />
+      {/* <BookTableButton /> */}
       <TopButton />
     </main>
   )
